@@ -7,7 +7,7 @@ export 'controllers/grocery_bloc.dart';
 export 'models/grocery_mdl.dart';
 
 //--SERVICES
-// export 'services/modules_srv.dart';
+export 'services/grocery_srv.dart';
 
 //--PAGES AND PARTS
 export 'pages/dashboard_pg.dart';

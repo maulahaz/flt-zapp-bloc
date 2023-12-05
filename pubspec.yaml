@@ -12,6 +12,7 @@ dependencies:
   bloc:
   flutter_bloc:
   dartz:
+  http:
 
   cupertino_icons: ^1.0.2
 

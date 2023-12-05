@@ -5,4 +5,6 @@ abstract class GroceryEvent {}
 
 class GroceryInitialEvent extends GroceryEvent {}
 
+class GroceryInitialFetchEvent extends GroceryEvent{}
+
 class GroceryAddEvent extends GroceryEvent {}
