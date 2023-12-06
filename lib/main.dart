@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'configs/x_configs.dart';
-import 'modules/dashboard/x_dashboards.dart';
-// import 'modules/home/x_homes.dart';
 // import 'modules/sliver_screen/x_sliver_screens.dart';
-// import 'modules/x_modules.dart';
+// import 'modules/home/x_homes.dart';
+// import 'modules/dashboard/x_dashboards.dart';
+import 'modules/grocery/x_groceries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
       // home: const ModulesView(),
       // home: SliverView(),
       // home: HomePage(),
-      home: DashboardPage(),
+      // home: DashboardPage(),
+      home: GroceryPage(),
     );
   }
 }

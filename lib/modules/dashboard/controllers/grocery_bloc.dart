@@ -20,17 +20,7 @@ class GroceryBloc extends Bloc<GroceryEvent, GroceryState> {
     emit(GroceryFetchLoadingState());
     // await Future.delayed(Duration(seconds: 3));
     List<GroceryModel> dtGrocery = await GroceryService.fetchData();
-    print(dtGrocery);
     emit(GroceryFetchSuccessState(data: dtGrocery));
-    // emit(GroceryFetchSuccessState(
-    //     data: GroceryData.groceryItems
-    //         .map((e) => GroceryModel(
-    //             id: e['id'],
-    //             name: e['name'],
-    //             description: e['description'],
-    //             price: e['price'],
-    //             imageUrl: e['imageUrl']))
-    //         .toList()));
   }
 
   Future<void> handleAddGocery(

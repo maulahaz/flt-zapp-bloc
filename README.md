@@ -11,10 +11,13 @@ Testing BLoC in Zapp.run
 - DB: xx
 - API: [jsonplaceholder](https://jsonplaceholder.typicode.com/)
 - Packages: bloc, flutter_bloc, http, intl,...
+- Modules ['dashboard']: use api from jsonplaceholder
+- Modules ['grocery']: using local data
 
 # References:
 - Random Images: [https://i.pravatar.cc/200](https://i.pravatar.cc/200)
 - Random Images: [https://picsum.photos/200](https://picsum.photos/200)
+- Unsplash Images: https://source.unsplash.com/[IMAGE ID]
 - [Colors](https://coolors.co/palettes/trending)
 - [SVG Icons](http://svgrepo.com)
 - [Ytb: Flutter BLoC... - By Akshit Madan](https://www.youtube.com/watch?v=Y1roIi0-Sro)

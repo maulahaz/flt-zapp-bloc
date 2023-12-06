@@ -35,9 +35,12 @@ class _DashboardPageState extends State<DashboardPage> {
         child: Icon(Icons.add),
         onPressed: () {
           print('Clicked:FloatingActionButton');
+          groceryBloc.add(GroceryAddEvent());
         },
       ),
       body: BlocConsumer<GroceryBloc, GroceryState>(
+          listenWhen: (previous, current) => current is GroceryActionState,
+          buildWhen: (previous, current) => current is! GroceryActionState,
           bloc: groceryBloc,
           listener: (context, state) {},
           builder: (context, state) {
