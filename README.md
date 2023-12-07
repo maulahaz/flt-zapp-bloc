@@ -10,9 +10,11 @@ Testing BLoC in Zapp.run
 - Backend: xx
 - DB: xx
 - API: [jsonplaceholder](https://jsonplaceholder.typicode.com/)
-- Packages: bloc, flutter_bloc, http, intl,...
+- Packages: bloc, flutter_bloc, http, intl, dartz, equatable, ...
+
 - Modules ['dashboard']: use api from jsonplaceholder
 - Modules ['grocery']: using local data
+- Modules ['movie']: using API external
 
 # References:
 - Random Images: [https://i.pravatar.cc/200](https://i.pravatar.cc/200)
@@ -24,3 +26,5 @@ Testing BLoC in Zapp.run
 - [Github: akmadan/flutter_bloc_tutorial](https://github.com/akmadan/flutter_bloc_tutorial)
 - [Ytb: Learn to make API... - By Akshit Madan](https://www.youtube.com/watch?v=ltLJ1AB-eww&t=5s)
 - [Github: akmadan/flutter_bloc_with_apis](https://github.com/akmadan/flutter_bloc_with_apis)
+- [Ytb: Movie App... - By Flutter Guys](https://www.youtube.com/watch?v=o1oGTIEr4tQ)
+- [Github: Fabrice-Fabio/movie-app-tdd-clean-archi](https://github.com/Fabrice-Fabio/movie-app-tdd-clean-archi)

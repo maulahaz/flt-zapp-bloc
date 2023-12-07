@@ -28,7 +28,7 @@ class _DashboardPageState extends State<DashboardPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Zapp with BLoC'),
+        title: Text('BLoC: Jsonplaceholder API'),
         centerTitle: true,
       ),
       floatingActionButton: FloatingActionButton(

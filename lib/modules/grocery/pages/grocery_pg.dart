@@ -26,7 +26,7 @@ class _GroceryPageState extends State<GroceryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Zapp with BLoC'),
+        title: Text('BLoC: Groceries Local API'),
         centerTitle: true,
       ),
       body: BlocConsumer<GroceryBloc, GroceryState>(
