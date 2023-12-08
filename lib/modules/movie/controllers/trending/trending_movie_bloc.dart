@@ -10,14 +10,6 @@ class TrendingMoviesBloc
     on<FetchTrendingMovies>(handleFetchTrendingMovies);
   }
 
-  Future<void> handleFetchTrendingMoviesXX(event, emit) async {
-    print('***handleFetchTrendingMoviesXX');
-    emit(TrendingMoviesLoading());
-    await Future.delayed(Duration(seconds: 3));
-    final result = await MovieService.fetchTrendingMovieDataXX();
-    emit(TrendingMoviesLoaded(result));
-  }
-
   Future<void> handleFetchTrendingMovies(event, emit) async {
     print('***handleFetchTrendingMovies');
     emit(TrendingMoviesLoading());
@@ -28,4 +20,12 @@ class TrendingMoviesBloc
       (R) => emit(TrendingMoviesLoaded(R)),
     );
   }
+
+  Future<void> handleFetchTrendingMoviesXX(event, emit) async {
+    print('***handleFetchTrendingMoviesXX');
+    emit(TrendingMoviesLoading());
+    await Future.delayed(Duration(seconds: 3));
+    final result = await MovieService.fetchTrendingMovieDataXX();
+    emit(TrendingMoviesLoaded(result));
+  }  
 }

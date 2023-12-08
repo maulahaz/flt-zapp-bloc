@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/modules/movie/x_movies.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'configs/x_configs.dart';
@@ -7,8 +6,7 @@ import 'configs/x_configs.dart';
 // import 'modules/home/x_homes.dart';
 // import 'modules/dashboard/x_dashboards.dart';
 // import 'modules/grocery/x_groceries.dart';
-// import 'modules/movie/x_movies.dart';
-import 'modules/movie_home/x_movie_homes.dart';
+import 'package:flutter_app/modules/movie/x_movies.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +21,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
             create: (context) =>
-                TrendingMoviesBloc()),
+                TrendingMoviesBloc()..add(FetchTrendingMovies())),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -35,7 +33,6 @@ class MyApp extends StatelessWidget {
         // home: HomePage(),
         // home: DashboardPage(),
         // home: GroceryPage(),
-        // home: MovieListPage(),
         home: MovieHomePage(),
       ),
     );

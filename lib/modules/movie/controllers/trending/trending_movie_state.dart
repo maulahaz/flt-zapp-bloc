@@ -7,6 +7,7 @@ class TrendingMoviesInitial extends TrendingMoviesState {}
 class TrendingMoviesLoading extends TrendingMoviesState {}
 class TrendingMoviesLoaded extends TrendingMoviesState {
   final List<MovieModel> movies;
+  // final MovieModel movies;
 
   TrendingMoviesLoaded(this.movies);
 }

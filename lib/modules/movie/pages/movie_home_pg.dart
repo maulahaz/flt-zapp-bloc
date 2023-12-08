@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/configs/x_configs.dart';
 import 'package:flutter_app/helpers/x_helpers.dart';
 import 'package:flutter_app/modules/movie/x_movies.dart';
-import 'package:flutter_app/widgets/button_wdg.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MovieHomePage extends StatelessWidget {
@@ -48,16 +47,12 @@ class MovieHomePage extends StatelessWidget {
                 'Trending Movies',
                 style: getFont(20, color: kWhite, isBold: true),
               ),
-              MyButtons.primary(context, 'Test Bloc', () {
-                context.read<TrendingMoviesBloc>().add(FetchTrendingMovies());
-              }),
               BlocBuilder<TrendingMoviesBloc, TrendingMoviesState>(
                   builder: (context, state) {
                 if (state is TrendingMoviesLoading) {
                   return Center(child: CircularProgressIndicator());
                 } else if (state is TrendingMoviesLoaded) {
-                  print('MovieCard');
-                  // return MovieCard(state.movies);
+                  return MovieListPage(movies:state.movies);
                 } else if (state is TrendingMoviesError) {
                   return Text(state.message);
                 }

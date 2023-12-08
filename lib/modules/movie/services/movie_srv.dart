@@ -11,26 +11,18 @@ class MovieService {
   static Future<Either<String, List<MovieModel>>>
       fetchTrendingMovieData() async {
     var client = http.Client();
-    try {
-      final response = await client.get(
-          Uri.parse("$BASE_URL_MOVIE/movie/popular?api_key=$API_KEY_MOVIE"));
-      print('***response.statusCode AA');
-      print(response.statusCode);
-      print(jsonDecode(response.body));
-      if (response.statusCode == 200) {
-        final responseBody = json.decode(response.body);
-        final List<MovieModel> movies = (responseBody['results'] as List)
-            .map((movie) => MovieModel.fromJson(movie))
-            .toList();
-        // return movies;
-        // List<MovieModel> result = jsonDecode(response.body);
-        print('***Yes:  movies');
-        print(movies);
-        return Right(movies);
-      } else {
-        return const Left('Upss..error occured');
-      }
-    } catch (e) {
+    final response = await client
+        .get(Uri.parse("$BASE_URL_MOVIE/movie/popular?api_key=$API_KEY_MOVIE"));
+    print(response.statusCode);
+    if (response.statusCode == 200) {
+      final responseBody = json.decode(response.body);
+      final List<MovieModel> movies = (responseBody['results'] as List)
+          .map((movie) => MovieModel.fromJson(movie))
+          .toList();
+      print('***fetchTrendingMovieData: OK');
+      return Right(movies);
+    } else {
+      print('***fetchTrendingMovieData: error');
       return Left('Upss..error occured');
     }
   }
