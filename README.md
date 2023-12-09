@@ -28,3 +28,4 @@ Testing BLoC in Zapp.run
 - [Github: akmadan/flutter_bloc_with_apis](https://github.com/akmadan/flutter_bloc_with_apis)
 - [Ytb: Movie App... - By Flutter Guys](https://www.youtube.com/watch?v=o1oGTIEr4tQ)
 - [Github: Fabrice-Fabio/movie-app-tdd-clean-archi](https://github.com/Fabrice-Fabio/movie-app-tdd-clean-archi)
+- [Github: afzalali15/http_client](https://github.com/afzalali15/http_client)
