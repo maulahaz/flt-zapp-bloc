@@ -13,6 +13,7 @@ const String APP_VERSI = '2.2111.6';
 const String BASE_URL = 'https://study-alone.000webhostapp.com/';
 // const String BASE_URL = "http://10.0.2.2/ci3-smartxl/"; // Emulator
 const BASE_URL_MOVIE = "https://api.themoviedb.org/3";
+const BASE_URL_NEWS = "https://newsapi.org/v2/";
 
 const int TIME_OUT_DURATION = 30; //--Seconds
 
