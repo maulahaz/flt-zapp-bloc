@@ -2,7 +2,7 @@
 // export 'controllers/modules_ctr.dart';
 
 //--MODELS
-// export 'models/modules_mdl.dart';
+export 'models/worktype_mdl.dart';
 
 //--SERVICES
 // export 'services/modules_srv.dart';

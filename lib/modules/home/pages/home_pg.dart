@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widgets/x_widgets.dart';
 
+import '../x_homes.dart';
+
 class HomePage extends StatefulWidget {
   HomePage({super.key});
 
@@ -10,6 +12,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final txtLocation = TextEditingController();
+
+  WorktypeModel selectedWorktype = WorktypeModel(id: 1);
 
   @override
   void dispose() {
@@ -50,14 +54,42 @@ class _HomePageState extends State<HomePage> {
             MyButtons.primaryGradiented(context, 'Primary Gradiented',
                 () => print('Primary Gradiented')),
             //--Dropdown:
-            MyTextField.roundWidget('Work Type',
-                controller: txtLocation,
-                iconWidget: IconButton(
-                  icon: Icon(Icons.refresh),
-                  onPressed: () {
-                    print('Work Type');
-                  },
-                )),
+            // MyDropdown<WorktypeModel>(
+            //   value: selectedWorktype,
+            //   items: dataWorktype,
+            //   label: 'Worktype',
+            //   onChanged: (val) {
+            //     setState(() {
+            //       selectedWorktype = val!;
+            //     });
+            //   },
+            // ),
+            MyDropdown<dynamic>(
+              value: '-',
+              items: ['-'],
+              label: 'Worktype',
+              onChanged: (val) {},
+            ),
+            MyDropdown<dynamic>(
+              value: '1',
+              items: dataWorktype3,
+              label: 'Worktype',
+              onChanged: (val) {},
+            ),
+            MyTextField.roundWidget(
+              'Work Type',
+              controller: txtLocation,
+              iconWidget: DropdownButton(
+                value: '1',
+                items: dataWorktype3.map((v) {
+                  return DropdownMenuItem(
+                    value: v,
+                    child: Text(v.toString()),
+                  );
+                }).toList(),
+                onChanged: (val) {},
+              ),
+            ),
           ],
         ),
       ),
