@@ -4,8 +4,20 @@ import 'package:flutter_app/helpers/x_helpers.dart';
 import 'package:flutter_app/modules/movie/x_movies.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class MovieHomePage extends StatelessWidget {
+class MovieHomePage extends StatefulWidget {
   const MovieHomePage({super.key});
+
+  @override
+  State<MovieHomePage> createState() => _MovieHomePageState();
+}
+
+class _MovieHomePageState extends State<MovieHomePage> {
+
+  @override
+    void initState() {
+      super.initState();
+      context.read<TrendingMoviesBloc>().add(FetchTrendingMovies());
+    }
 
   @override
   Widget build(BuildContext context) {

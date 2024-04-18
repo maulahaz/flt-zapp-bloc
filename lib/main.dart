@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'configs/x_configs.dart';
-// import 'modules/sliver_screen/x_sliver_screens.dart';
-// import 'modules/home/x_homes.dart';
-// import 'modules/dashboard/x_dashboards.dart';
-// import 'modules/grocery/x_groceries.dart';
+import 'modules/home/x_homes.dart';
+import 'modules/sliver_screen/x_sliver_screens.dart';
+import 'modules/dashboard/x_dashboards.dart';
+import 'modules/grocery/x_groceries.dart';
 import 'package:flutter_app/modules/movie/x_movies.dart';
 
 void main() {
@@ -19,21 +19,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
-            create: (context) =>
-                TrendingMoviesBloc()..add(FetchTrendingMovies())),
+        BlocProvider(create: (context) => TrendingMoviesBloc()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter App!!',
         theme: MyThemes.lightMode,
         darkTheme: MyThemes.darkMode,
-        // home: const ModulesView(),
-        // home: SliverView(),
-        // home: HomePage(),
-        // home: DashboardPage(),
-        // home: GroceryPage(),
-        home: MovieHomePage(),
+        initialRoute: '/',
+        routes: {
+          '/': (context) => HomePage(),
+          '/dashboard': (context) => DashboardPage(),
+          '/grocery': (context) => GroceryPage(),
+          '/movie_home': (context) => MovieHomePage(),
+          '/sliver': (context) => SliverView(),
+        },
       ),
     );
   }

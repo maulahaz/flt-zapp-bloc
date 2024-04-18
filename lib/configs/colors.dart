@@ -10,14 +10,36 @@ const kGreen = Colors.green;
 const kBlue = Colors.blue;
 const kYellow = Colors.yellow;
 const kGrey = Colors.grey;
+//
+const cRed = Color(0xFFE92E30);
+const cBlue = Colors.blue;
+const cGreen = Color(0xFF6AC259);
+const cYellow = Colors.yellow;
+const cGrey = Color(0xFFC1C1C1);
+const cWhite = Color(0xFFFFFFFF);
+const cBlack = Color(0xFF101010);
+const cTransparent = Colors.transparent;
 
 //--App Colors Pallets:
+const cPrimer = Color.fromARGB(255, 104, 133, 156);
+const cSecond = Color.fromARGB(255, 243, 231, 206);
 const kAppPrimary = Colors.teal;
 const kAppPrimaryDark = Color(0xffa2d2ff);
 const kAppPrimaryDark2 = Color(0xffcdb4db);
 const kAppPrimaryLight = Color(0xffbde0fe);
 const kAppSecondary = Color(0xffafcc);
 const kAppSecondaryLight = Color(0xffc8dd);
+const cTx1 = cBlack;
+//secondarText = Grey
+const cTx2 = Color.fromARGB(255, 102, 102, 102);
+//primaryBackground == Color Primary
+const cBg1 = cPrimer;
+//secondaryBackground = Grey
+const cBg2 = Color.fromARGB(255, 247, 247, 249);
+//primaryElement = blue
+const cElement1 = Color.fromARGB(255, 61, 61, 216);
+//
+const cStroke = Color.fromARGB(255, 104, 133, 156);
 
 //--App Colors Additional:
 const kAppBiruDark = Color(0xFF0081a7);
